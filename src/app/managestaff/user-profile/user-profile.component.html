@@ -1,0 +1,112 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="card">
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title">Add Agents</h4>
+                      <p class="card-category">Enter Details</p>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                        <div class="row">
+                          <div class="col-md-4">
+                            
+                              <mat-form-field>
+                                <mat-label>
+                                  Assign Ward
+                                </mat-label>
+                                  <mat-select  [(ngModel)]="fvalue" [ngModelOptions]="{standalone: true}">
+                                    <mat-option *ngFor="let ward of showWards" [value]="ward.value" >
+                                      {{ward.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                            </div>
+
+                            <div class="col-md-4">
+                            
+                              <mat-form-field>
+                                <mat-label>
+                                  Staff Type
+                                </mat-label>
+                                  <mat-select [(ngModel)]="fstaffType" [ngModelOptions]="{standalone: true}">
+                                    <mat-option *ngFor="let emp of empType" [value]="emp.value">
+                                      {{emp.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                            </div>
+
+
+                          <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="User ID"  disabled>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                         
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email address" type="email" [(ngModel)] = "femail" [ngModelOptions]="{standalone: true}">
+                                  </mat-form-field>
+                              </div>
+                              
+                            <div class="col-md-4">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Set Password" type="password" [(ngModel)] = "fpassword" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                            
+                              <mat-form-field>
+                                <mat-label>
+                                  Staff Status
+                                </mat-label>
+                                  <mat-select [(ngModel)]="fstatus" [ngModelOptions]="{standalone: true}">
+                                    <mat-option  *ngFor="let stat of showStatus" [value]="stat.value">
+                                      {{stat.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                            </div>
+                      </div>
+                          
+                          <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="First Name" type="text" name = "fname" [(ngModel)] = "ffname" [ngModelOptions]="{standalone: true}">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Last Name" type="text" name = "lname" [(ngModel)] = "flname" [ngModelOptions]="{standalone: true}">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          
+                            <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Phone No." type="number"  name  = "phone" [(ngModel)] = "fphone" [ngModelOptions]="{standalone: true}">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Address" type="text" [(ngModel)] = "faddress" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field></div>
+
+                            </div>
+                          <button mat-raised-button type="reset" (click) = "addAuth()" class="btn btn-success pull-right">Add Staff</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>

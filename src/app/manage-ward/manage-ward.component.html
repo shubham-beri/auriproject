@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Add Ward</h4>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Enter Ward  number" name ="id" [(ngModel)] = "id" type="number">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Enter ward description" name ="description" [(ngModel)] ="description" type="text">
+                                  </mat-form-field>
+                                </div>
+                               
+                            </div>
+                            
+                            
+                            <button mat-raised-button type="reset"  (click) = "addWard()" class="btn btn-success pull-right">Add Ward</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div>
+  

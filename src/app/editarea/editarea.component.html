@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit  Area Details</h4>
+  <button type="button" class="close" aria-label="Close"
+   (click)="activeModal.dismiss('Cross click')">
+  </button>
+</div>
+
+  <div class="modal-boy">
+    <div class="container">
+                              <br>
+      
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Enter  Area  name" name ="id" [(ngModel)] = "areaname1" type="text">
+                                </mat-form-field>
+                            
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Enter area description" name ="description" [(ngModel)] ="areadescription1" type="text">
+                              </mat-form-field>
+
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Enter ward number" name ="description" [(ngModel)] ="wardnumber1" type="number">
+                              </mat-form-field>
+    </div>
+  </div>
+
+
+  <div class="modal-footer">
+    <button class="btn btn-success" (click) ="editareadetails()">
+      Update  Area
+    </button>
+  </div>

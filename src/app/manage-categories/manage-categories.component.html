@@ -1,0 +1,78 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Add Category</h4>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Category Name" [(ngModel)] = "categoryName" type="text" name = "idk">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="No Of Sub Categories" name  = "idk" [(ngModel)] = "fields" type="number">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                                                       
+                            <button mat-raised-button type="submit" (click)= "addField()" class="btn btn-success pull-right">Add Fields</button>
+                            
+                        </form>
+                    </div>
+                </div>
+                    
+
+
+                       
+                
+                    </div>
+                </div><!-- </div> row -->
+
+
+            <div *ngIf =  "check" >
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header card-header-success">
+                                <h4 class="card-title">Add Sub  Category</h4>
+                                
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row"  *ngFor = "let num of data ; index as i">
+                                        <div class = "col-md-4">
+                                            <mat-form-field  class="example-full-width">
+                                                <input matInput  placeholder="Sub Category" type="text"   name = "idk" [(ngModel)] = "value[i]">
+                                                        
+                                            </mat-form-field>
+                                        </div>
+                                        <div class = "col-md-4">
+                                            <mat-form-field  class="example-full-width">
+                                                <input matInput placeholder="price" type="number"   name = "idk" [(ngModel)] = "prices[i]">        
+                                            </mat-form-field>
+                                        </div>                                        
+                                    </div>
+                                    <button mat-raised-button type="submit" (click)= "Submit()" class="btn btn-success pull-right">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            
+            </div>
+            </div>
+        
+
+ 
+  

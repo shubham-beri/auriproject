@@ -1,0 +1,68 @@
+<div class="modal-dialog-title">
+  <h4 class="modal-title">Update Staff Details</h4>
+  <button type="button" class="close" aria-label="Close"
+   (click)="activeModal.dismiss('Cross click')">
+  </button>
+</div>
+
+  <div class="mat-dialog-content">
+              <div class = "container">
+                 
+                    
+                        
+                          <mat-form-field>
+                            <mat-label>
+                              Staff Type
+                            </mat-label>
+                              <mat-select [(ngModel)]="fstaffType" >
+                                <mat-option *ngFor="let emp of empType" [value]="emp.value">
+                                  {{emp.viewValue}}
+                                </mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                       
+
+
+                      
+                    
+                          <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Set Password" type="text" [(ngModel)] = "password" >
+                          </mat-form-field>
+                       
+                          <mat-form-field>
+                            <mat-label>
+                              Staff Status
+                            </mat-label>
+                              <mat-select [(ngModel)]="fstatus">
+                                <mat-option  *ngFor="let stat of showStatus" [value]="stat.value">
+                                  {{stat.viewValue}}
+                                </mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                        
+                      
+                      
+                            <mat-form-field class="example-full-width">
+                              <input matInput placeholder="First Name" type="text" name = "fname" [(ngModel)] = "fname" >
+                            </mat-form-field>
+                          
+                            <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Last Name" type="text" name = "lname" [(ngModel)] = "lname" >
+                            </mat-form-field>
+                          
+                            <!-- <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Phone No." type="number"  name  = "phone" [(ngModel)] = "phone" >
+                            </mat-form-field>
+                           -->
+                     
+                  
+              </div>
+          </div>
+
+
+
+  <div class="mat-dialog-actions">
+    <button type = "submit" class="mat-raised-button" (click) ="updatestaff()">
+      Update Staff
+    </button>
+  </div>

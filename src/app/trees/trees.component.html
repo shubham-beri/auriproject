@@ -1,0 +1,102 @@
+<!-- <div class = "main-content">
+<div class = "container">
+<form >
+    
+       <label>Email address</label>
+      <input type="email"  class="form-control" [(ngModel)] = "email" name="idk">
+    
+   
+      <label>Password</label>
+      <input type="password" class="form-control"  [(ngModel)] = "password" name="idk"required>
+      <label class="error">{{errorMessage}}</label>
+      <label class="success">{{successMessage}}</label> 
+
+    <input type = "number" [(ngModel)] = "wardNo" name= "wardNo" >
+    <button type="submit" (click)="login()" class="btn btn-default">Submit to Auth</button>
+ </form>
+</div>
+</div> -->
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Add Areas</h4>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form>
+                          <div class="row">
+                            <div class="col-md-4">
+                              
+                              <mat-form-field>
+                                <mat-label>
+                                  Assign Ward
+                                </mat-label>
+                                  <mat-select [(ngModel)] ="wardno" name="wardno" (ngModelChange)= "click()" >
+                                    <mat-option *ngFor="let ward of items" [value]="ward">
+                                      {{ward}}
+                                    </mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                            </div>
+                          </div>
+                          <!-- <div class="row">
+                            <div class="col-md-6">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="No Of areas" name  = "idk" [(ngModel)] = "fields" type="number">
+                              </mat-form-field>
+                            </div>
+                        </div> -->
+                          
+                            
+                            <button mat-raised-button type="submit" (click) = "openFormModal()" class="btn btn-success pull-right">Add Areas</button>
+                            <div class="clearfix"></div>  
+                        
+                            
+  
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title">Area Stats</h4>
+                      
+                  </div>
+                  <div class="card-body table-responsive">
+                      <table class="table table-hover">
+                          <thead class="text-success">
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>Edit Area</th>
+                              
+                          </thead>
+                          <tbody>
+                            
+                            
+                              <tr *ngFor = "let area of areas | async ; index as i  ">
+                                  <td>{{i+1}}</td>
+                                  <td>{{area.areaName}}</td>
+                                  <td>
+                                    <button mat-raised-button color="primary"  
+    (click)="onEdit(area.areaHashCode) ">Edit</button>
+                                  </td>
+                                                            
+                              </tr>
+                            
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+  
+  
+        </div>
+        
+  
+    </div>
+  </div>
+  

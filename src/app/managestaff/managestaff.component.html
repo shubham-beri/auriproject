@@ -1,0 +1,72 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Select Ward</h4>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form>
+                          <div class="row">
+                            <div class="col-md-4">
+                              
+                                <mat-form-field>
+                                    <mat-label>
+                                      Assign Ward
+                                    </mat-label>
+                                      <mat-select [(ngModel)] ="wardno" name="wardno" (ngModelChange)= "click()" >
+                                        <mat-option *ngFor="let ward of items" [value]="ward">
+                                          {{ward}}
+                                        </mat-option>
+                                      </mat-select>
+                                  </mat-form-field>                               
+                            </div>
+                              
+                          </div>
+                              </form>
+        </div>
+    </div></div></div>
+  
+        <div class="row" >
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Ward Employees</h4>
+                        
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover">
+                            <thead class="text-succcess">
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Creation Date</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                            </thead>
+                            <tbody>
+                              
+                              
+                                <tr *ngFor = "let staff of areas | async">
+                                  
+                                    <td>{{staff.name}}</td>
+                                    <td>{{staff.email}}</td>
+                                    <td>{{staff.creationDate}}</td>
+                                    <td>{{staff.status}}</td> 
+                                    <td><button mat-raised-button color="primary"  
+                                        (click)="onEdit(staff ,staff.staffHashCode) ">Edit</button></td>
+                                            
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
