@@ -6,6 +6,7 @@ import { ManageCategoriesComponent } from '../../manage-categories/manage-catego
 import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../trees/trees.component';
 import { ManagestaffComponent } from 'app/managestaff/managestaff.component';
+import { EditcategoryComponent } from 'app/editcategory/editcategory.component';
 
 
 
@@ -59,5 +60,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'manage-ward',     component: ManageWardComponent },
     { path: 'manage-categories',     component: ManageCategoriesComponent },
     { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent }
+    { path: 'maps',           component: MapsComponent },
+    {path : 'editcategory' , component : EditcategoryComponent}
 ];

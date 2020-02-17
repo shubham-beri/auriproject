@@ -27,6 +27,19 @@ export class ManageCategoriesComponent implements OnInit {
 
 
   }
+
+  addcategory()
+  {
+    if(this.categoryName.length > 1)
+    {
+    var st = this.afs.createId();
+    var ob = {};
+    this.afs.collection('Category').doc(st).set({'categoryHashCode' : st , 'categoryTitle' : this.categoryName ,'subCategories' : ob });
+    }else
+    {
+      window.alert('category name cant be empty');
+    }
+  }
   addField() {
 
     if (this.categoryName.length > 0 && this.fields > 0) {

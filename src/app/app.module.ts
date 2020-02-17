@@ -35,6 +35,8 @@ import { AddwarmodalComponent } from './addwarmodal/addwarmodal.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditareaComponent } from './editarea/editarea.component';
+import { AddsubcategorymodalComponent } from './addsubcategorymodal/addsubcategorymodal.component';
+
 
 @NgModule({
   imports: [
@@ -67,11 +69,13 @@ import { EditareaComponent } from './editarea/editarea.component';
     AdminLayoutComponent,
     DialogOpenComponent,
     AddwarmodalComponent,
-    EditareaComponent
+    EditareaComponent,
+    AddsubcategorymodalComponent,
+    
 
   ],
   providers: [FetchStaffService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogOpenComponent, AddwarmodalComponent , EditareaComponent]
+  entryComponents: [DialogOpenComponent, AddwarmodalComponent , EditareaComponent , AddsubcategorymodalComponent]
 })
 export class AppModule { }

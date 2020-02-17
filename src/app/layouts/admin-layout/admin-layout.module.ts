@@ -21,6 +21,7 @@ import {
   MatTooltipModule,
   MatSelectModule
 } from '@angular/material';
+import { EditcategoryComponent } from 'app/editcategory/editcategory.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -39,6 +40,7 @@ import {
     UserProfileComponent,
     ManageWardComponent,
     ManageCategoriesComponent,
+    EditcategoryComponent,
     IconsComponent,
     MapsComponent,
     ManagestaffComponent

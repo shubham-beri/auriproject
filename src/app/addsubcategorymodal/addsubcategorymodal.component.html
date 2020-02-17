@@ -1,0 +1,41 @@
+<div class="modal-dialog-title">
+  <h4 class="modal-title">Add SubCategory</h4>
+  <button type="button" class="close" aria-label="Close"
+   (click)="activeModal.dismiss('Cross click')">
+  </button>
+</div>
+
+  <div class="mat-dialog-content">
+              <div class = "container">
+                 
+                    <br>
+                        
+                       
+
+
+                      
+                    
+                          <mat-form-field class="example-full-width">
+                            <input matInput placeholder="SubCategory Name" type="text" [(ngModel)] = "title" >
+                          </mat-form-field>
+                       
+                        
+                            
+                      
+                            <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Enter price" type="number" name = "price" [(ngModel)] = "price" >
+                            </mat-form-field>
+                          
+                           
+                     
+                  
+              </div>
+          </div>
+
+
+
+  <div class="mat-dialog-actions">
+    <button type = "submit" class="btn btn-success" (click) ="addsubcategory()">
+      Add SubCategory
+    </button>
+  </div>

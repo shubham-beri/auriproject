@@ -84,7 +84,7 @@ export class ManagestaffComponent implements OnInit {
         password: staffobj.password,
         status : staffobj.status,
         staffType : staffobj.staffType
-    };
+                    }
 
       const dialogRef = this.dialog.open(DialogOpenComponent , dialogConfig);
       // data b pass hogya modal ko even i dont need it

@@ -1,0 +1,70 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="card">
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title">Select Category</h4>
+                      
+                  </div>
+                  <div class="card-body">
+                      <form>
+                        <div class="row">
+                          <div class="col-md-4">
+                            
+                              <mat-form-field>
+                                  <mat-label>
+                                    Select Catgegory
+                                  </mat-label>
+                                    <mat-select [(ngModel)] ="categoryhashcode" name="categoryhashcode" (ngModelChange)= "click()" >
+                                      <mat-option *ngFor="let obj of items" [value]="obj.categoryHashCode">
+                                        {{obj.categoryTitle}}
+                                      </mat-option>
+                                    </mat-select>
+                                </mat-form-field>                               
+                          </div>
+                            
+                        </div>
+                        <button mat-raised-button type="submit" (click) = "addsubcategory()" class="btn btn-success pull-right">Add Sub Category</button>
+                        
+                        </form>
+      </div>
+  </div></div></div>
+
+      <div class="row" >
+          <div class="col-lg-12 col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title">Category Status</h4>
+                      
+                  </div>
+                  <div class="card-body table-responsive">
+                      <table class="table table-hover">
+                          <thead class="text-succcess">
+                              <th>Sub Category Name</th>
+                              <th>Price</th>
+                              <th>Edit</th>
+                          </thead>
+                          <tbody>
+                            
+                            
+                              <tr *ngFor = "let obj  of subcategoryobjectarray  ">
+                                
+                                  <td>{{obj.title}}</td>
+                                  <td>{{obj.price}}</td> 
+                                  <td><button mat-raised-button color="primary"  
+                                      (click)="onEdit(staff ,staff.staffHashCode) ">Edit</button></td>
+                                          
+                              </tr>
+                            
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+</div>
+
